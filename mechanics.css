@@ -1,0 +1,208 @@
+/* ==============================
+   General Reset
+   ============================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Orbitron', sans-serif;
+    background: #0d0d0d;
+    color: white;
+}
+
+/* ==============================
+   Navigation Bar
+   ============================== */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 60px;
+    background: #111;
+    border-bottom: 1px solid #222;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.logo .heart {
+    color: #ff1a1a; /* Heart red */
+}
+
+.logo .fall,
+.logo .smp {
+    color: #ffffff; /* Fall/SMP white */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff1a1a;
+}
+
+/* ==============================
+   Features / Server Mechanics Section
+   ============================== */
+.features {
+    padding: 120px 10% 80px; /* Top padding accounts for fixed nav */
+}
+
+.features h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #ff1a1a; /* Section heading red */
+    text-align: center;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* Feature Box */
+.feature-box {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 8px;
+    padding: 20px;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.feature-box h3 {
+    margin-bottom: 12px;
+    font-size: 20px;
+    color: #ffcc00;
+}
+
+.feature-box p {
+    font-size: 16px;
+    color: #ddd;
+    margin-bottom: 15px;
+}
+
+.feature-box .read-btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    background: #ff1a1a;
+    padding: 8px 15px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.feature-box .read-btn:hover {
+    background: #ff4d4d;
+    color: #fff;
+}
+
+.feature-box:hover {
+    transform: translateY(-5px);
+    background: #1a1a1a;
+}
+
+/* ==============================
+   Mechanics List (Server Mechanics & Event Details)
+   ============================== */
+.mechanics-list {
+    max-width: 900px;
+    margin: 0 auto 50px auto;
+    padding: 25px;
+    background: #111;
+    border-radius: 10px;
+    border: 1px solid #222;
+}
+
+.mechanics-list ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.mechanics-list li {
+    background: rgba(255, 153, 0, 0.1); /* light carrot highlight for event list */
+    padding: 12px 15px;
+    border-left: 5px solid #ff9900; /* carrot-orange accent line */
+    margin-bottom: 12px;
+    border-radius: 6px;
+    font-size: 17px;
+    line-height: 1.6;
+    transition: transform 0.3s, background 0.3s;
+}
+
+.mechanics-list li:hover {
+    transform: translateY(-3px);
+    background: rgba(255, 153, 0, 0.2);
+}
+
+.mechanics-list li strong {
+    color: #ffcc00;
+}
+
+/* ==============================
+   Footer
+   ============================== */
+footer {
+    text-align: center;
+    padding: 30px;
+    background: #111;
+    border-top: 1px solid #222;
+    color: #777;
+}
+
+/* ==============================
+   Responsive
+   ============================== */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px 30px;
+    }
+
+    .features {
+        padding: 120px 5% 60px;
+    }
+
+    .feature-box {
+        padding: 15px;
+    }
+
+    .feature-box h3 {
+        font-size: 18px;
+    }
+
+    .feature-box p {
+        font-size: 15px;
+    }
+
+    .mechanics-list li {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    .features h2 {
+        font-size: 28px;
+    }
+}

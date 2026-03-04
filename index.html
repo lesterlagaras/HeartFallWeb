@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>HeartFall SMP - Lifesteal Server</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <span class="heart">❤️Heart</span><span class="fall">Fall</span> <span class="smp">SMP</span>
+        </div>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="features.html">Features</a></li>
+            <li><a href="#">Store</a></li>
+            <li><a href="https://discord.gg/gxgdTS9NVU">Discord</a></li>
+        </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+
+        <!-- Background Layer -->
+        <div class="hero-bg"></div>
+
+        <div class="hero-content">
+            <h1>
+                <span class="heart">Heart</span><span class="fall">Fall</span> <span class="smp">SMP</span>
+            </h1>
+            <p class="hero-description">
+                HeartFall SMP is a competitive Lifesteal PvP server where every battle matters. 
+                Defeat players to steal their hearts, rise through the ranks, and dominate a world 
+                built for intense survival combat. Strategy, skill, and survival decide your fate.
+            </p>
+
+            <div class="server-box">
+                <div class="ip-info">
+                    <span id="serverIP">mc.heartfall.xyz</span>
+                    <button onclick="copyIP()" class="copy-btn">Copy</button>
+                </div>
+                <div class="bedrock">
+                    Bedrock Port: <strong>25565</strong>
+                </div>
+                <div id="copyMessage" class="copy-message"></div>
+            </div>
+
+            <div class="buttons">
+                <button class="play-btn" onclick="copyIP()">Play Now</button>
+                <a href="https://discord.gg/gxgdTS9NVU" class="discord-btn" target="_blank">Join Discord</a>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <h2>Server Features</h2>
+        <div class="feature-grid">
+            <div class="feature-box">
+                <h3>⚔ Competitive PvP</h3>
+                <p>Fight against the strongest players and climb the leaderboard.</p>
+            </div>
+            <div class="feature-box">
+                <h3>💀 Lifesteal System</h3>
+                <p>Every kill steals a heart. Lose all hearts and you're banned.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🎉 Custom Events</h3>
+                <p>2x Heart Events and exclusive server mechanics.</p>
+            </div>
+            <div class="feature-box">
+                <h3>🛒 Cosmetics</h3>
+                <p>Chat effects, kill effects, teleport effects, and more.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 HeartFall SMP | mc.heartfall.xyz</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="navigation.js"></script>
+    <script>
+    function copyIP() {
+        const ip = document.getElementById("serverIP").innerText;
+        navigator.clipboard.writeText(ip);
+
+        const message = document.getElementById("copyMessage");
+        message.innerText = "IP Copied to Clipboard!";
+        message.style.opacity = "1";
+
+        setTimeout(() => {
+            message.style.opacity = "0";
+        }, 2000);
+    }
+    </script>
+
+</body>
+</html>
