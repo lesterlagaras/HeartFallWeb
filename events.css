@@ -1,0 +1,95 @@
+/* ================= EVENTS SECTION ================= */
+.events {
+    padding: 100px 60px;
+    text-align: center;
+}
+
+.events h1 {
+    font-size: 36px;
+    margin-bottom: 50px;
+    color: #ff3b3b;
+}
+
+/* ================= CONTAINER ================= */
+.event-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* ================= EVENT CARD ================= */
+.event-card {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+
+    padding: 25px;
+    width: 320px;
+
+    backdrop-filter: blur(12px);
+    text-align: left;
+
+    transition: 0.3s;
+}
+
+/* Hover effect */
+.event-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff3b3b;
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+/* ================= TEXT ================= */
+.event-card h2 {
+    margin-bottom: 15px;
+    color: #ff3b3b;
+}
+
+.event-card p {
+    margin-bottom: 8px;
+    color: #ccc;
+    font-size: 14px;
+}
+
+/* ================= COMMAND BOX ================= */
+.command-box {
+    margin: 15px 0;
+    padding: 12px;
+
+    background: rgba(0,0,0,0.5);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 6px;
+
+    text-align: center;
+}
+
+.command-box code {
+    color: #ff3b3b;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* ================= DESCRIPTION ================= */
+.desc {
+    font-size: 13px;
+    color: #999;
+    margin-top: 10px;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+    .events {
+        padding: 80px 20px;
+    }
+
+    .events h1 {
+        font-size: 28px;
+    }
+
+    .event-card {
+        width: 100%;
+        max-width: 400px;
+    }
+}

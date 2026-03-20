@@ -1,0 +1,337 @@
+/* ================= GLOBAL ================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background: #0a0a0a;
+    color: #ffffff;
+}
+
+/* ================= NAVBAR ================= */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 60px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.logo .heart {
+    color: #ff3b3b;
+}
+
+.logo .fall {
+    color: #ffffff;
+}
+
+.logo .smp {
+    color: #999;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    color: #ccc;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #ff3b3b;
+}
+
+/* ================= HERO ================= */
+.hero {
+    position: relative;
+    padding: 100px 60px;
+    overflow: hidden;
+}
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255,0,0,0.15), transparent 60%);
+    z-index: 0;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 60px;
+
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* LEFT = IP BOX */
+.hero-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* RIGHT = DESCRIPTION */
+.hero-right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+/* ================= TEXT ================= */
+.hero h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero .heart {
+    color: #ff3b3b;
+}
+
+.hero .fall {
+    color: #ffffff;
+}
+
+.hero-description {
+    color: #aaa;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+/* ================= SERVER BOX ================= */
+.server-box {
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 12px;
+
+    padding: 20px;
+    width: 100%;
+    max-width: 350px;
+
+    text-align: center;
+    backdrop-filter: blur(10px);
+}
+
+.ip-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 10px;
+}
+
+#serverIP {
+    font-weight: bold;
+}
+
+.copy-btn {
+    background: #ff3b3b;
+    border: none;
+    padding: 6px 10px;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.copy-btn:hover {
+    background: #ff1f1f;
+}
+
+.bedrock {
+    font-size: 14px;
+    color: #aaa;
+}
+
+.copy-message {
+    margin-top: 10px;
+    font-size: 13px;
+    color: #00ff88;
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* ================= BUTTONS ================= */
+.buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.play-btn {
+    background: #ff3b3b;
+    border: none;
+    padding: 12px 20px;
+    color: white;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.play-btn:hover {
+    background: #ff1f1f;
+}
+
+.discord-btn {
+    padding: 12px 20px;
+    border: 1px solid #ff3b3b;
+    color: #ff3b3b;
+    text-decoration: none;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.discord-btn:hover {
+    background: #ff3b3b;
+    color: white;
+}
+
+/* ================= FEATURES ================= */
+.features-alt {
+    padding: 100px 60px;
+}
+
+/* OLD MULTI FEATURE (optional if used elsewhere) */
+.feature-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+
+    max-width: 1100px;
+    margin: 80px auto;
+}
+
+.feature-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.feature-text {
+    flex: 1;
+}
+
+.feature-text h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.feature-text p {
+    color: #aaa;
+    line-height: 1.6;
+}
+
+.feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ================= SINGLE FEATURE (NEW CLEAN STYLE) ================= */
+.feature-single {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+
+    max-width: 1100px;
+    margin: auto;
+}
+
+.feature-single .feature-text {
+    flex: 1;
+}
+
+.feature-single .feature-text h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.feature-single .feature-text p {
+    color: #aaa;
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.feature-single .feature-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.feature-single .feature-image img {
+    width: 100%;
+    max-width: 420px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
+}
+
+/* ================= FOOTER ================= */
+footer {
+    text-align: center;
+    padding: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #777;
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+
+    nav {
+        padding: 20px;
+    }
+
+    .hero-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .hero-left,
+    .hero-right {
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .buttons {
+        justify-content: center;
+    }
+
+    .feature-row,
+    .feature-row.reverse,
+    .feature-single {
+        flex-direction: column;
+        text-align: center;
+    }
+}
