@@ -2,50 +2,63 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>HeartFall SMP - Lifesteal Server</title>
+    <title>HeartFall SMP</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="home.css">
+
+    <link rel="icon" href="image/fav.png" type="image/png">
+
+    <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <!-- Navigation -->
-    <nav>
-        <div class="logo">
-            <span class="heart">❤️Heart</span><span class="fall">Fall</span> <span class="smp">SMP</span>
-        </div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="features.html">Features</a></li>
-            <li><a href="donations.html">Donations</a></li>
-            <li><a href="https://discord.gg/gxgdTS9NVU">Discord</a></li>
-        </ul>
-    </nav>
+<!-- ================= NAVBAR ================= -->
+<nav>
+    <div class="logo">
+        <span class="heart">❤️Heart</span><span class="fall">Fall</span> SMP
+    </div>
 
-    <!-- Hero Section -->
-    <section class="hero">
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="events.html">Events</a></li>
+        <li><a href="donation.html">Donation</a></li>
+        <li><a href="https://discord.gg/gxgdTS9NVU" target="_blank">Discord</a></li>
+    </ul>
+</nav>
 
-        <!-- Background Layer -->
-        <div class="hero-bg"></div>
+<!-- ================= HERO ================= -->
+<section class="hero">
 
-        <div class="hero-content">
+    <div class="hero-bg"></div>
+
+    <div class="hero-content">
+
+        <!-- LEFT -->
+        <div class="hero-left">
             <h1>
-                <span class="heart">Heart</span><span class="fall">Fall</span> <span class="smp">SMP</span>
+                <span class="heart">Heart</span><span class="fall">Fall</span> SMP
             </h1>
+
             <p class="hero-description">
                 HeartFall SMP is a competitive Lifesteal PvP server where every battle matters. 
-                Defeat players to steal their hearts, rise through the ranks, and dominate a world 
-                built for intense survival combat. Strategy, skill, and survival decide your fate.
+                Steal hearts by defeating players, survive intense fights, and dominate the leaderboard.
+                Strategy, skill, and survival define your fate.
             </p>
+        </div>
+
+        <!-- RIGHT -->
+        <div class="hero-right">
 
             <div class="server-box">
                 <div class="ip-info">
                     <span id="serverIP">mc.heartfall.xyz</span>
-                    <button onclick="copyIP()" class="copy-btn">Copy</button>
+                    <button class="copy-btn" onclick="copyIP()">Copy</button>
                 </div>
+
                 <div class="bedrock">
                     Bedrock Port: <strong>25565</strong>
                 </div>
+
                 <div id="copyMessage" class="copy-message"></div>
             </div>
 
@@ -55,52 +68,60 @@
             </div>
 
         </div>
-    </section>
 
-    <!-- Features -->
-    <section class="features">
-        <h2>Server Features</h2>
-        <div class="feature-grid">
-            <div class="feature-box">
-                <h3>⚔ Competitive PvP</h3>
-                <p>Fight against the strongest players and climb the leaderboard.</p>
-            </div>
-            <div class="feature-box">
-                <h3>💀 Lifesteal System</h3>
-                <p>Every kill steals a heart. Lose all hearts and you're banned.</p>
-            </div>
-            <div class="feature-box">
-                <h3>🎉 Custom Events</h3>
-                <p>2x Heart Events and exclusive server mechanics.</p>
-            </div>
-            <div class="feature-box">
-                <h3>🛒 Cosmetics</h3>
-                <p>Chat effects, kill effects, teleport effects, and more.</p>
-            </div>
+    </div>
+</section>
+
+<!-- ================= FEATURES ================= -->
+<section id="features" class="features-alt">
+
+    <div class="feature-single">
+
+        <div class="feature-text">
+            <h2>🔥 HeartFall SMP Experience</h2>
+
+            <p>
+                HeartFall SMP is a vanilla competitive survival server where players are free to use any PvP style mechanics such as crystal PvP, spear, mace, sword, and cart combat.  
+                Choose the playstyle you are most comfortable with and dominate your enemies through skill and strategy.
+            </p>
+
+            <p>
+                Base griefing and team betrayal are allowed, making alliances risky and gameplay unpredictable. Massive farms are also encouraged as a way to generate income and progress.
+            </p>
+
+            <p>
+                The server features a balanced economy system with a shop that includes blocks, tools, food, enchantments, potions, and heart recipes.
+            </p>
+
+            <p>
+                Additional features include lifesteal mechanics, competitive PvP environment, events, and a progression system designed for long-term survival gameplay.
+            </p>
         </div>
-    </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 HeartFall SMP | mc.heartfall.xyz</p>
-    </footer>
+    </div>
 
-    <!-- Scripts -->
-    <script src="navigation.js"></script>
-    <script>
-    function copyIP() {
-        const ip = document.getElementById("serverIP").innerText;
-        navigator.clipboard.writeText(ip);
+</section>
 
-        const message = document.getElementById("copyMessage");
-        message.innerText = "IP Copied to Clipboard!";
-        message.style.opacity = "1";
+<!-- ================= FOOTER ================= -->
+<footer>
+    <p>© 2026 HeartFall SMP | mc.heartfall.xyz</p>
+</footer>
 
-        setTimeout(() => {
-            message.style.opacity = "0";
-        }, 2000);
-    }
-    </script>
+<!-- ================= SCRIPT ================= -->
+<script>
+function copyIP() {
+    const ip = document.getElementById("serverIP").innerText;
+    navigator.clipboard.writeText(ip);
+
+    const msg = document.getElementById("copyMessage");
+    msg.innerText = "IP Copied!";
+    msg.style.opacity = "1";
+
+    setTimeout(() => {
+        msg.style.opacity = "0";
+    }, 2000);
+}
+</script>
 
 </body>
 </html>
